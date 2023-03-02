@@ -1,6 +1,6 @@
 CC = gcc
 TARGET = r.out
-SRC = msg.c
+SRC = ipc_smp.c
 
 $(TARGET): $(SRC)
 	$(CC) -o $(TARGET) $(SRC)
