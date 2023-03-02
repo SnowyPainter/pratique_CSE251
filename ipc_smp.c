@@ -43,7 +43,7 @@ void child_process() {
 
     //sleep(1000); <-- if there's no semaphore, then the other process will run.
     //It means, no semaphore -> use std io public
-    
+
     v(id);
     exit(0);
 }
@@ -53,5 +53,8 @@ int main() {
         if(fork() == 0) child_process();
 
     printf("done!\n");
+
+    //delete semaphore ...
+    //semctl(id, 0, IPC_RMID);
     return 0;
 }
